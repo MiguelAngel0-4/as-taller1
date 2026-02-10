@@ -6,10 +6,10 @@ mensaje = input("Digite tu mensaje: ")
 cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 cliente.connect((HOST, PORT))
 
-cliente.sendall(mensaje)
+cliente.sendall(mensaje.encode())
 print("Mensaje enviados: '{mensaje}'")
 respuesta = cliente.recv(1024)
-print(f"Repuesta del 'Echo': '{respuesta}'")
+print(f"Repuesta del 'Echo': '{respuesta.decode()}'")
 
 cliente.close()
 
