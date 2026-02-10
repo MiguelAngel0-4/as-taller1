@@ -4,7 +4,7 @@ import http.server
 HOST = 'localhost'
 PORT = 9000
 
-class Servidor(http.server.SimpleHTTPRequestHandlermple):
+class Servidor(http.server.SimpleHTTPRequestHandler):
     pass
 
 Servidor = http.server.HTTPServer((HOST, PORT), Servidor)
