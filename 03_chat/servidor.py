@@ -13,7 +13,7 @@ def atender_cliente(cliente, nombre):
             if not mensaje:
                 break
             print(f"{nombre}: {mensaje.decode()}")
-            broadcast(mensaje, cliente)
+            broadcast(mensaje.decode(), cliente)
 
         except ConnectionResetError:
             clientes.remove(cliente)
