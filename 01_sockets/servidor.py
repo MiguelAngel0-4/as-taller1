@@ -8,7 +8,7 @@ servidor.listen()
 print("el servidor esta a la espera de conexiones ...")
 
 cliente, direccion = servidor.accept()
-print(f"un cliente se conectó desde la dirección {direccion}")
+print(f"un cliente {cliente} se conectó desde la dirección {direccion}")
 
 datos = cliente.recv(1024)
 cliente.sendall(b"HOla! " + datos) #ojo! debe ser binario, no cadena
