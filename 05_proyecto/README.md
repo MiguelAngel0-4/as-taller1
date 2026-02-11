@@ -10,7 +10,7 @@ Sistema de chat simple y eficiente usando sockets TCP en Python.
 ## Instalación
 
 1. Descarga los archivos:
-   - `server.py`
+   - `servidor.py`
    - `cliente.py`
 
 2. No requiere instalación de dependencias adicionales
@@ -21,7 +21,7 @@ Sistema de chat simple y eficiente usando sockets TCP en Python.
 
 Abre una terminal y ejecuta:
 ```bash
-python server.py
+python3 servidor.py
 ```
 
 Verás el mensaje:
@@ -33,7 +33,7 @@ Servidor iniciado en localhost:5555
 
 Abre **nuevas terminales** (una por cada usuario) y ejecuta:
 ```bash
-python cliente.py
+python3 cliente.py
 ```
 
 Cuando te pida el Usuario, escribe tu nombre y presiona Enter.
