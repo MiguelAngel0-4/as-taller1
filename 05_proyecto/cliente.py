@@ -14,15 +14,12 @@ class ChatClient:
             self.socket.connect((self.host, self.port))
             print(f"Conectado al servidor {self.host}:{self.port}")
             
-            # Recibir solicitud de username
             prompt = self.socket.recv(1024).decode('utf-8')
             print(prompt, end='')
             
-            # Enviar username
             username = input().strip()
             self.socket.send(username.encode('utf-8'))
             
-            # Verificar respuesta
             response = self.socket.recv(1024).decode('utf-8')
             print(response)
             
@@ -108,4 +105,3 @@ if __name__ == "__main__":
     
     client = ChatClient(host, port)
     client.start()
-
